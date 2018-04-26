@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-init-method="init" default-destroy-method="destroy"
+>
+<bean id="hello"  class="com.hello" scope="singleton" >
+    <property name="message1" value="helloworld 1" />
+    <property name="message2"  value="2222222"/>
+
+
+</bean>
+    <bean id="HelloChina" class="com.HelloChina" scope="singleton" parent="hello">
+        <property name="message1"  value="hello china"/>
+        <property name="message3"  value="3333333333333333"/>
+    </bean>
+    <bean class="com.InitHello" />
+</beans>
