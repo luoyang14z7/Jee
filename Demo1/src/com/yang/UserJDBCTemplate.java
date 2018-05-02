@@ -25,5 +25,12 @@ public class UserJDBCTemplate implements UserDAO {
     return users;
     }
 
+    public Integer getuser(String username,String password){
+        String SQL = "SELECT count(*) FROM USERS WHERE username=? AND password=?";
+        Integer getuser = jdbcTemplateObject.queryForObject(SQL,new Object[]{username, password},Integer.class);
+        return getuser;
+    }
+
+
 
 }

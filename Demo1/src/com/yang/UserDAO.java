@@ -8,4 +8,6 @@ public interface UserDAO {
     public void adduser(String username, String password);
 
     public List<UserLogin> listusers();
+
+    public Integer getuser(String username, String password);
 }

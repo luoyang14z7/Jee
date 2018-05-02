@@ -26,7 +26,7 @@ public class MainApp {
         System.out.println("------------Updating Record with ID=2 -----------");
         studentJDBCTemplate.update(2, 20);
         System.out.println("----------Listing Record with ID=2------------");
-        Student student = studentJDBCTemplate.getStudent(2);
+        Student student = studentJDBCTemplate.getStudent(2,"haha44");
         System.out.print("ID:" + student.getId());
         System.out.print(",NAMe:" + student.getName());
         System.out.println(",AGe:" + student.getAge());

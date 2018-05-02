@@ -19,9 +19,9 @@ public class StudentJDBCTemplate implements StudentDAO{
         return;
     }
 
-    public Student getStudent(Integer id) {
-        String SQL = "select * from Student where id =?";
-        Student student = jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new StudentMapper());
+    public Student getStudent(Integer id,String name) {
+        String SQL = "select * from Student where id =? and name =?";
+        Student student = jdbcTemplateObject.queryForObject(SQL, new Object[]{id,name}, new StudentMapper());
         return student;
     }
 

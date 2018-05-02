@@ -7,7 +7,7 @@ public interface StudentDAO {
 
     public void create(String name, Integer age);
 
-    public Student getStudent(Integer id);
+    public Student getStudent(Integer id,String name);
 
     public List<Student> listStudents();
 
