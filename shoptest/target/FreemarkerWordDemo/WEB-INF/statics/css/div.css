@@ -1,0 +1,6 @@
+.box {
+    width: 300px;
+    border: 8px solid gainsboro;
+    padding: 10px;
+    margin: 25px;
+}
