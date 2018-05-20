@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="/js/reg.js" ></script>
+</head>
+<body>
+<div id="reg">
+<form name="formUser"  action="adduser" method="post" >
+    <table>
+<tr>
+    <td>username:</td><td><input type="text"   id="username" onBlur="checkUserName(this)" name="username"><SPAN id="username_notice" >*</SPAN></td>
+</tr>
+        <tr>
+            <td>password:</td><td><input  onBlur="checkPassword(this)"
+                                          onkeyup="checkIntensity(this.value)" type="password" name="password"> <SPAN
+                id=password_notice >*</SPAN></td>
+        </tr>
+        <TR align=middle>
+            <TD id=pwd_lower width="33%">弱</TD>
+            <TD id=pwd_middle width="33%">中</TD>
+            <TD id=pwd_high width="33%">强</TD>
+        </TR>
+        <TR>
+            <TD align=right><STRONG>确认密码:</STRONG></TD>
+            <TD><INPUT id="conform_password" onBlur="checkConformPassword(this)"
+                       type="password" name="conform_password">
+                <SPAN id=conform_password_notice >*</SPAN></TD>
+        </TR>
+        <TR>
+            <TD> </TD>
+            <TD><LABEL>
+                <INPUT type="checkbox" id="agreement" onclick="checkAgreement(this)">
+                <B>我已看过并接受《<a href="#">用户协议</a>》<SPAN id=agreement_notice >*</SPAN></B></LABEL></TD>
+        </TR>
+
+        <tr> <TD  ><INPUT type=hidden value=act_register name=act></TD>
+            <td><input type="submit" value="regist"></td></tr>
+    </table>
+</form>
+</div>
+</body>
+</html>

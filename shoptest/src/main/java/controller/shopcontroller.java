@@ -18,6 +18,7 @@ import model.shoplist;
 @Controller
 @RequestMapping("/home")
 public class shopcontroller {
+
     private static SqlSessionFactory sqlSessionFactory;
     String resource = "configration.xml";
     Reader reader = null;

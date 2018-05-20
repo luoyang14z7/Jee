@@ -24,7 +24,7 @@
             <td><form:input path="password" /></td>
         </tr>
         <tr>
-            <td><<input type="submit" value="regist">
+            <td><input type="submit" value="regist">
             </td>
         </tr>
     </table>
